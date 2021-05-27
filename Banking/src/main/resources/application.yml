@@ -1,0 +1,8 @@
+auth0:
+  audience: https://accounts
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://dev-dr46x8ru.eu.auth0.com/
