@@ -76,37 +76,6 @@ public class AccountControllerTest {
                 .andExpect(content().string("return balance"));
     }
 
-    //@Test
-    // public void deleteAirport_OK() throws Exception {
-
-    //    mockMvc.perform(get("/airports/{id}").header(HttpHeaders.AUTHORIZATION,
-    //            "Basic " + Base64Utils.encodeToString("admin:nimde".getBytes())))
-    //            .andExpect(status().isNoContent())
-    //            .andExpect(content().string("delete airport"));
-    //}
-    @Test
-    public void putAirport_OK() throws Exception {
-
-        mockMvc.perform(get("/airports/").header(HttpHeaders.AUTHORIZATION,
-                "Basic " + Base64Utils.encodeToString("admin:nimde".getBytes())))
-                .andExpect(status().isOk())
-                .andExpect(content().string("Update airports"));
-    }
-
-    @Test
-    public void errorMessage() throws Exception {
-        mockMvc.perform(get("/airports").header(HttpHeaders.AUTHORIZATION,
-                "Basic" + Base64Utils.encodeToString("admin:nimde".getBytes())))
-                .andExpect(status().isUnauthorized())
-                .andExpect(status().is4xxClientError());
-    }
 
 
-    @PostMapping("/accounts")
-    @ResponseStatus(HttpStatus.CREATED)
-    public String createAirport(@Valid @RequestBody Account account, HttpServletResponse response) {
-        return ("Update account");
-
-
-    }
-}
+  }
